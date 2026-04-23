@@ -1,4 +1,5 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
+from datetime import datetime
 from app.core.database import Base
 
 class Note(Base):
@@ -8,3 +9,7 @@ class Note(Base):
     title = Column(String)
     content = Column(String)
     user_id = Column(Integer, ForeignKey("users.id"))
+
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
