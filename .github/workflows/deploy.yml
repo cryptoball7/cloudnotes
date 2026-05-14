@@ -23,6 +23,8 @@ jobs:
           script: |
             cd ~/cloudnotes
 
+            date | tee date
+
             git pull origin master
 
             docker compose down
