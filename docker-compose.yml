@@ -2,13 +2,14 @@ services:
   db:
     image: postgres:15
     restart: always
+    env_file:
+      - .env
     environment:
-      POSTGRES_USER: clouduser
-      POSTGRES_PASSWORD: cloudpass
-      POSTGRES_DB: cloudnotes
-    ports:
-      - "5433:5432"
-
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 
   api:
     build:
@@ -19,8 +20,6 @@ services:
     container_name: cloudnotes-api
     depends_on:
       - db
-    environment:
-      DATABASE_URL: postgresql://clouduser:cloudpass@db:5432/cloudnotes
     volumes:
       - .:/app
 
