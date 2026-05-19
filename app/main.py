@@ -3,7 +3,7 @@ from app.core.database import engine, Base
 
 from app.models import user, note  # IMPORTANT
 
-from app.api import auth, notes
+from app.api import auth, notes, health
 
 app = FastAPI()
 
@@ -17,4 +17,5 @@ def read_root():
 
 app.include_router(auth.router, prefix="/auth")
 app.include_router(notes.router, prefix="/notes")
+app.include_router(health.router, prefix="/health")
 

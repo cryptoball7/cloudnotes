@@ -5,6 +5,8 @@ from app.models.note import Note
 from app.models.user import User
 from app.schemas.note import NoteCreate, NoteUpdate, NoteOut
 
+from app.core.logging_config import logger
+
 router = APIRouter()
 
 # ✅ Create Note
@@ -23,6 +25,8 @@ def create_note(
     db.add(new_note)
     db.commit()
     db.refresh(new_note)
+
+    logger.info(f"Note created by user_id={current_user.id}")
 
     return new_note
 
@@ -79,6 +83,8 @@ def delete_note(
 
     db.delete(note)
     db.commit()
+
+    logger.warning(f"Note deleted id={note_id} user_id={current_user.id}")
 
     return {"message": "Note deleted"}
 
