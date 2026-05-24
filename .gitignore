@@ -1,4 +1,22 @@
-.env
+# Python
 __pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+
+# Environment
+.env
 venv/
-logs/*
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
