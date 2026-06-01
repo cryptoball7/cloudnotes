@@ -1,7 +1,7 @@
 ## Quick Start
 
 ```bash
-git clone <repo>
+git clone https://github.com/cryptoball7/cloudnotes.git
 cd cloudnotes
 cp .env-example .env
 docker compose up --build
