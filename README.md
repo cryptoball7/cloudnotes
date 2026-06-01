@@ -65,7 +65,11 @@ https://cloudnotes.my.to/docs
 
 ## Screenshots
 
-[screenshots]
+![screenshot](docs/screenshots/SwaggerUI.png)
+![screenshot](docs/screenshots/UptimeRobot_status.png)
+![screenshot](docs/screenshots/deploy_cloudnotes_on_github_actions.png)
+![screenshot](docs/screenshots/health_healthy.png)
+![screenshot](docs/screenshots/secure_https.png")
 
 ## Future Improvements
 
