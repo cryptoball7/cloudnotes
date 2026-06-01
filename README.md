@@ -5,6 +5,7 @@ git clone <repo>
 cd cloudnotes
 cp .env-example .env
 docker compose up --build
+```
 
 # CloudNotes
 
