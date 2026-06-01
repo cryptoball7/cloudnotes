@@ -25,7 +25,7 @@ Production-ready multi-user notes SaaS built with FastAPI, PostgreSQL, Docker, N
 
 ## Architecture
 
-!(docs/architecture.png)
+![diagram image](docs/architecture.png)
 
 ## Tech Stack
 
