@@ -25,7 +25,7 @@ Production-ready multi-user notes SaaS built with FastAPI, PostgreSQL, Docker, N
 
 ## Architecture
 
-![diagram image](docs/architecture.png)
+![User -> Domain + HTTPS -> Nginx Reverse Proxy -> FastAPI App -> PostgreSQL | GitHub Actions -> SSH Deploy -> DigitalOcean Droplet](docs/architecture.png)
 
 ## Tech Stack
 
@@ -65,11 +65,11 @@ https://cloudnotes.my.to/docs
 
 ## Screenshots
 
-![screenshot](docs/screenshots/SwaggerUI.png)
-![screenshot](docs/screenshots/UptimeRobot_status.png)
-![screenshot](docs/screenshots/deploy_cloudnotes_on_github_actions.png)
-![screenshot](docs/screenshots/health_healthy.png)
-![screenshot](docs/screenshots/secure_https.png)
+![Swagger UI Screenshot](docs/screenshots/SwaggerUI.png)
+![UptimeRobot Status Screenshot](docs/screenshots/UptimeRobot_status.png)
+![Deploy CloudNotes Screenshot](docs/screenshots/deploy_cloudnotes_on_github_actions.png)
+![Health Healthy Screenshot](docs/screenshots/health_healthy.png)
+![HTTPS Secure Screenshot](docs/screenshots/secure_https.png)
 
 ## Future Improvements
 
