@@ -9,9 +9,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # Install system deps (needed for psycopg2)
-RUN apt-get update -o Acquire::ForceIPv4=true -o Acquire::http::Timeout="10" && \
-    apt-get install -y --no-install-recommends gcc libpq-dev && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y gcc libpq-dev
 
 # Copy requirements first (for caching)
 COPY requirements.txt .
